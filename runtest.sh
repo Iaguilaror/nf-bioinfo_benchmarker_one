@@ -1,8 +1,7 @@
 output_directory="results"
 
 echo -e "======\n Testing NF execution \n======" \
-&& rm -rf $output_directory \
-&& nextflow run benchmarkme_one.nf \
+nextflow run benchmarkme_one.nf \
 	--output_dir $output_directory \
 	-resume \
 	-with-report $output_directory/`date +%Y%m%d_%H%M%S`_report.html \
