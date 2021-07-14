@@ -9,7 +9,7 @@ Channel
 
 process _001_fastqc {
 
- publishDir "${params.output_dir}/_001_fastqc/",mode:"symlink"
+ publishDir "${params.output_dir}/_001_fastqc/",mode:"move"
 
  input:
  file files from inputs_001
@@ -18,7 +18,7 @@ process _001_fastqc {
  file "*"
 
  """
- ./fastqc *.fastq.gz
+ ./fastqc --threads 1 *.fastq.gz
  """
 
 }
