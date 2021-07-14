@@ -4,21 +4,21 @@ Channel
 
 Channel
   .fromPath( 'bin/fastqc/fastqc' )
-  .set{ fastqc_exe }
+  .combine(fastqfiles)
+  .set{ inputs_001 }
 
 process _001_fastqc {
 
  publishDir "${params.output_dir}/_001_fastqc/",mode:"symlink"
 
  input:
- file sample from fastqfiles
- file exe from fastqc_exe
+ file files from inputs_001
 
  output:
  file "*"
 
  """
- ./fastqc ${sample}
+ ./fastqc *.fastq.gz
  """
 
 }
