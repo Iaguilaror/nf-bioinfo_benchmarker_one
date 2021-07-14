@@ -1,6 +1,6 @@
 output_directory="results"
 
-echo -e "======\n Testing NF execution \n======" \
+echo -e "======\n Testing NF execution \n======"
 nextflow run benchmarkme_one.nf \
 	--output_dir $output_directory \
 	-resume \
