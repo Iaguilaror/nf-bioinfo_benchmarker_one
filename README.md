@@ -11,4 +11,4 @@ This pipeline runs a parallel NF pipeline to run fastqc on 94 fastq.gz files
 
  each fastq.gz file contains 50,000 reads from sample SRR13516428_2.fastq
 
-The pipeline is meant to be used to compare
+The pipeline is meant to be used to compare speed in different hardware envs. Mainly, this will help me to make recommendations about new laptops for students.
