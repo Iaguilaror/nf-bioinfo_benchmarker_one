@@ -29,3 +29,8 @@ git clone https://github.com/Iaguilaror/nf-bioinfo_benchmarker_one
 cd nf-bioinfo_benchmarker_one/
 bash runtest.sh
 ````
+# TO-DO
+* Develop mapping module
+
+# Authors
+* Israel Aguilar - Design and Full Dev.
