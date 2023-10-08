@@ -5,12 +5,14 @@ process _001_fastqc {
 
  publishDir "${params.output_dir}/_001_fastqc/",mode:"move"
 
+
  input:
- file files from inputs_001
+ path MATERIALS
 
  output:
- file "*"
+ path "*"
 
+ script:
  """
  ./fastqc --threads 1 *.fastq.gz
  """
